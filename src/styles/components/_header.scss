@@ -1,0 +1,21 @@
+header {
+  width: 100%;
+  height: 91px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+}
+.logo {
+  width: 178px;
+  height: 60.93px;
+  margin-left: 30px;
+}
+.communaute {
+  margin-right: 30px;
+}
