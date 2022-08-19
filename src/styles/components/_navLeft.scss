@@ -1,0 +1,22 @@
+.navleft {
+  height: 100%;
+  width: 117px;
+  background-color: black;
+}
+.contentIcon {
+  height: 316px;
+  width: 64px;
+  margin: 0 auto;
+  margin-top: 256px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.copiryght {
+  font-size: 12px;
+  height: 35px;
+  width: 138px;
+  color: white;
+  transform: rotate(-90deg);
+  margin-top: 190px;
+}
