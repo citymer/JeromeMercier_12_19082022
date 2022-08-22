@@ -1,6 +1,7 @@
 @import './components/header';
 @import './components/navLeft';
 @import './components/titres';
+@import './components/activiteQuotidienne';
 
 body {
   margin: 0;
@@ -10,4 +11,9 @@ main {
   width: 100%;
   height: 933px;
   display: flex;
+}
+.resultat {
+  display: flex;
+  margin-left: 107px;
+  margin-top: 76px;
 }
