@@ -1,6 +1,7 @@
 import Header from './components/Header'
 import './styles/index.scss'
 import NavLeft from './components/NavLeft'
+import Titres from './components/Titres'
 
 function App() {
   return (
@@ -8,7 +9,9 @@ function App() {
       <Header />
       <main>
         <NavLeft />
-        <section></section>
+        <section>
+          <Titres />
+        </section>
       </main>
     </div>
   )
