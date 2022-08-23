@@ -1,0 +1,15 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.proteines {
+  @include boiteIcon;
+}
+.imgProteine {
+  @include formeIcon;
+}
+.g {
+  @include textTopBoiteIcon;
+}
+.textProteines {
+  @include textBottomBoiteIcon;
+}

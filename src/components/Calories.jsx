@@ -4,7 +4,7 @@ const Calories = () => {
   return (
     <div className="calories">
       <div className="iconDiv">
-        <img className="imgCalorie" src={calories} alt="" />
+        <img className="imgCalorie" src={calories} alt="calories" />
       </div>
       <div className="textDiv">
         <p className="kcal">1.930KCal</p>
