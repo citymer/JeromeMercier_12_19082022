@@ -1,22 +1,22 @@
 @import '../utils/variables';
 @import '../utils/mixins';
 
-.calories {
+.boite {
   @include boiteIcon;
 }
 .iconDiv {
   margin-left: 15px;
 }
-.imgCalorie {
+.img {
   @include formeIcon;
 }
 .textDiv {
   height: 60px;
   margin-right: 20px;
 }
-.kcal {
+.textTop {
   @include textTopBoiteIcon;
 }
-.textCalories {
+.textBottom {
   @include textBottomBoiteIcon;
 }

@@ -3,13 +3,13 @@ import proteines from '../assets/protein-icon.png'
 
 const Proteines = () => {
   return (
-    <div className="proteines">
+    <div className="boite">
       <div className="iconDiv">
-        <img className="imgProteine" src={proteines} alt="proteines" />
+        <img className="img" src={proteines} alt="proteines" />
       </div>
       <div className="textDiv">
-        <p className="g">155g</p>
-        <p className="textProteines">Proteines</p>
+        <p className="textTop">155g</p>
+        <p className="textBottom">Proteines</p>
       </div>
     </div>
   )

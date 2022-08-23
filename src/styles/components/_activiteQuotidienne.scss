@@ -1,5 +1,8 @@
+@import '../utils/variables';
+
 .activite {
   width: 835px;
   height: 320px;
-  background-color: gray;
+  border-radius: 5px;
+  background-color: $backround;
 }

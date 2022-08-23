@@ -2,13 +2,13 @@ import React from 'react'
 import calories from '../assets/calories.png'
 const Calories = () => {
   return (
-    <div className="calories">
+    <div className="boite">
       <div className="iconDiv">
-        <img className="imgCalorie" src={calories} alt="calories" />
+        <img className="img" src={calories} alt="calories" />
       </div>
       <div className="textDiv">
-        <p className="kcal">1.930KCal</p>
-        <p className="textCalories">Calories</p>
+        <p className="textTop">1.930KCal</p>
+        <p className="textBottom">Calories</p>
       </div>
     </div>
   )

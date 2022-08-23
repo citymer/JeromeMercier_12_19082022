@@ -6,7 +6,6 @@
 @import './components/moyenne';
 @import './components/intensite';
 @import './components/calories';
-@import './components/proteines';
 
 body {
   margin: 0;
@@ -29,5 +28,8 @@ main {
   margin-top: 30px;
 }
 .iconeValeur {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-left: 30px;
 }

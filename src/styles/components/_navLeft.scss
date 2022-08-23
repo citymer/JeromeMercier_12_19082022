@@ -1,7 +1,9 @@
+@import '../utils/variables';
+
 .navleft {
   height: 100%;
   width: 117px;
-  background-color: black;
+  background-color: $header;
 }
 .contentIcon {
   height: 316px;
@@ -16,7 +18,7 @@
   font-size: 12px;
   height: 35px;
   width: 138px;
-  color: white;
+  color: $blanc;
   transform: rotate(-90deg);
   margin-top: 190px;
 }
