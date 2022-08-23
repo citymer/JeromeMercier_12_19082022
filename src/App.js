@@ -6,6 +6,10 @@ import ActiviteQuotidienne from './components/ActiviteQuotidienne'
 import Moyenne from './components/Moyenne'
 import Intensite from './components/Intensite'
 import Score from './components/Score'
+import Calories from './components/Calories'
+import Proteines from './components/Proteines'
+import Glucides from './components/Glucides'
+import Lipides from './components/Lipides'
 
 function App() {
   return (
@@ -24,7 +28,12 @@ function App() {
                 <Score />
               </div>
             </div>
-            <div className="iconeValeur"></div>
+            <div className="iconeValeur">
+              <Calories />
+              <Proteines />
+              <Glucides />
+              <Lipides />
+            </div>
           </div>
         </section>
       </main>

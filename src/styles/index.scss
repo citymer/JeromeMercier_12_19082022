@@ -5,6 +5,7 @@
 @import './components/activiteQuotidienne';
 @import './components/moyenne';
 @import './components/intensite';
+@import './components/calories';
 
 body {
   margin: 0;
@@ -25,4 +26,7 @@ main {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
+}
+.iconeValeur {
+  margin-left: 30px;
 }

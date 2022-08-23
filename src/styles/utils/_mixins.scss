@@ -1,0 +1,25 @@
+@mixin boiteIcon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 258px;
+  height: 124px;
+  background-color: $backround;
+  border-radius: 5px;
+}
+@mixin formeIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+}
+@mixin textTopBoiteIcon {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+@mixin textBottomBoiteIcon {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 7px;
+}
