@@ -1,43 +1,16 @@
-import Header from './components/Header'
+import Home from './pages/Home'
 import './styles/index.scss'
-import NavLeft from './components/NavLeft'
-import Titres from './components/Titres'
-import ActiviteQuotidienne from './components/ActiviteQuotidienne'
-import Moyenne from './components/Moyenne'
-import Intensite from './components/Intensite'
-import Score from './components/Score'
-import Calories from './components/Calories'
-import Proteines from './components/Proteines'
-import Glucides from './components/Glucides'
-import Lipides from './components/Lipides'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <Header />
-      <main>
-        <NavLeft />
-        <section>
-          <Titres />
-          <div className="resultat">
-            <div className="graphiques">
-              <ActiviteQuotidienne />
-              <div className="troisGraphiques">
-                <Moyenne />
-                <Intensite />
-                <Score />
-              </div>
-            </div>
-            <div className="iconeValeur">
-              <Calories />
-              <Proteines />
-              <Glucides />
-              <Lipides />
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Navigate to="/home/12" />} />
+        <Route path="/home/:userId" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
+
 export default App

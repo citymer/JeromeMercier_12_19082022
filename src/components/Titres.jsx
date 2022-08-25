@@ -1,10 +1,12 @@
 import React from 'react'
 
-const titres = () => {
+const titres = (data) => {
+  let info = data.data.userInfos
+  console.log(info)
   return (
     <div className="titres">
       <h1>
-        Bonjour <span>Jéjé</span>
+        Bonjour <span>{info.firstName}</span>
       </h1>
       <h2>Félicitation ! Vous avez explosé vos objectifs hier 👏</h2>
     </div>
