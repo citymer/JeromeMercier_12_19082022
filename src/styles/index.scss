@@ -1,10 +1,10 @@
-@import './components/score';
 @import './components/header';
 @import './components/navLeft';
 @import './components/titres';
 @import './components/activiteQuotidienne';
-@import './components/moyenne';
 @import './components/intensite';
+@import './components/moyenne';
+@import './components/score';
 @import './components/calories';
 
 body {
@@ -20,16 +20,28 @@ main {
   display: flex;
   margin-left: 107px;
   margin-top: 76px;
+  @include desktop {
+    display: block;
+  }
 }
 .troisGraphiques {
   width: 835px;
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 750px;
+  }
 }
 .iconeValeur {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-left: 30px;
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }

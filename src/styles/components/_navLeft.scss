@@ -1,9 +1,13 @@
 @import '../utils/variables';
+@import '../utils/mixins';
 
 .navleft {
   height: 100%;
   width: 117px;
   background-color: $header;
+  @include desktop {
+    height: 1500px;
+  }
 }
 .contentIcon {
   height: 316px;
@@ -21,4 +25,7 @@
   color: $blanc;
   transform: rotate(-90deg);
   margin-top: 190px;
+  @include desktop {
+    margin-top: 557px;
+  }
 }

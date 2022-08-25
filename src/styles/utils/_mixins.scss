@@ -23,3 +23,10 @@
   font-weight: 500;
   margin-top: 7px;
 }
+// breakpoint
+
+@mixin desktop {
+  @media screen and (max-width: 1370px) {
+    @content;
+  }
+}

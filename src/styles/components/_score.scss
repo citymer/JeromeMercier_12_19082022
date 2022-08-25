@@ -5,4 +5,8 @@
   height: 263px;
   border-radius: 5px;
   background-color: $backround;
+  @include desktop {
+    margin-left: 57px;
+    margin-top: 57px;
+  }
 }

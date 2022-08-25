@@ -5,4 +5,7 @@
   height: 263px;
   border-radius: 5px;
   background-color: $moyenne;
+  @include desktop {
+    margin-left: 57px;
+  }
 }
