@@ -15,13 +15,8 @@ import { useParams } from 'react-router-dom'
 
 const Home = () => {
   let { userId } = useParams()
-  let {
-    mainData,
+  let { mainData, activityData, error } = useFetch(userId)
 
-    error,
-  } = useFetch(userId)
-
-  //console.log(activityData)
   // console.log(averageSessionsData)
   //console.log(performanceData)
   //console.log(isLoading)
@@ -41,7 +36,7 @@ const Home = () => {
 
             <div className="resultat">
               <div className="graphiques">
-                <ActiviteQuotidienne />
+                <ActiviteQuotidienne data={activityData} />
                 <div className="troisGraphiques">
                   <Moyenne />
                   <Intensite />

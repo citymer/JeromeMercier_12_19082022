@@ -50,3 +50,16 @@ h3 {
 .poid {
   font-size: 14px;
 }
+.custom-tooltip-activity {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 63px;
+  width: 39px;
+  background-color: #e60000;
+  .label {
+    font-size: 7px;
+    color: $blanc;
+  }
+}
