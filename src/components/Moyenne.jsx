@@ -13,7 +13,7 @@ const Moyenne = (data) => {
         data={session}
         onMouseMove={(e) => {
           if (e.isTooltipActive === true) {
-            let div = document.querySelector('.averageSessions')
+            let div = document.querySelector('.moyenne')
             let windowWidth = div.clientWidth
             let mouseXpercentage = Math.round(
               (e.activeCoordinate.x / windowWidth) * 100
