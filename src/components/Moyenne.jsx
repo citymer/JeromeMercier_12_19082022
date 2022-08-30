@@ -9,7 +9,7 @@ const Moyenne = (data) => {
       <LineChart
         width={258}
         height={263}
-        margin={{ top: 45, right: 0, left: 0, bottom: 5 }}
+        margin={{ top: 35, right: 5, left: 5, bottom: 10 }}
         data={session}
         onMouseMove={(e) => {
           if (e.isTooltipActive === true) {
@@ -32,7 +32,7 @@ const Moyenne = (data) => {
         />
         <YAxis
           dataKey="sessionLength"
-          padding={{ top: 50 }}
+          padding={{ top: 40, bottom: 20 }}
           stroke="#FFFFFF"
           opacity={0.5}
           tickLine={false}
@@ -43,7 +43,7 @@ const Moyenne = (data) => {
         <Tooltip />
 
         <Line
-          type="basis"
+          type="natural"
           dataKey="sessionLength"
           stroke="#FFFFFF"
           dot={false}
