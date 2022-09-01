@@ -24,13 +24,12 @@ const ActiviteQuotidienne = (data) => {
       <div className="graphique">
         <BarChart width={740} height={250} data={session} margin={{ left: 30 }}>
           <CartesianGrid strokeDasharray="1 1" vertical={false} />
-          <XAxis dataKey="day" tickLine={false} axisLine={false} />
+          <XAxis dataKey="jour" tickLine={false} axisLine={false} />
           <XAxis
             dataKey="calories"
             type="number"
             tickLine={false}
             axisLine={false}
-            stroke=""
           />
 
           <YAxis
@@ -50,10 +49,12 @@ const ActiviteQuotidienne = (data) => {
             type="number"
             hide={true}
           />
+
+          <Tooltip content={<CustomTooltip />} />
           <Bar
             yAxisId="kilogram"
             name="Poids (kg)"
-            label={true}
+            label={false}
             dataKey="kilogram"
             fill="#282d30"
             radius={[10, 10, 0, 0]}
@@ -62,14 +63,12 @@ const ActiviteQuotidienne = (data) => {
           <Bar
             yAxisId="calories"
             name="Calories brûlées (kCal)"
-            label={true}
+            label={false}
             dataKey="calories"
             fill="#e60000"
             radius={[10, 10, 0, 0]}
             barSize={7}
           />
-
-          <Tooltip content={<CustomTooltip />} />
         </BarChart>
       </div>
     </div>
@@ -98,7 +97,7 @@ CustomTooltip.propTypes = {
 ActiviteQuotidienne.propTypes = {
   activity: PropTypes.arrayOf(
     PropTypes.shape({
-      day: PropTypes.number,
+      jour: PropTypes.number,
       kilogram: PropTypes.number,
       calories: PropTypes.number,
     })
