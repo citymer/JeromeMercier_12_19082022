@@ -1,4 +1,5 @@
 @import '../utils/variables';
+@import '../utils/mixins';
 
 .score {
   width: 258px;
@@ -8,5 +9,33 @@
   @include desktop {
     margin-left: 57px;
     margin-top: 57px;
+  }
+}
+h3 {
+  margin-bottom: -30px;
+}
+.custom-legend-score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 135px;
+  height: 135px;
+  background-color: $blanc;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 59px;
+
+  .custom-legend-text {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .text-objectif {
+    margin-top: 0;
+    width: 80px;
+    margin-left: 25px;
   }
 }
