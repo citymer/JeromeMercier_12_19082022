@@ -1,4 +1,5 @@
 @import '../utils/variables';
+@import '../utils/mixins';
 
 .moyenne {
   width: 258px;
@@ -7,5 +8,32 @@
   background-color: $moyenne;
   @include desktop {
     margin-left: 57px;
+  }
+}
+h4 {
+  position: absolute;
+  width: 150px;
+  margin-bottom: 0;
+  margin-left: 30px;
+  color: $blanc;
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 50.6%;
+}
+.custom-tooltip-objectif {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 7px;
+  padding-right: 7px;
+  height: 24px;
+  border: none;
+  .textValue {
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 24px;
+    text-align: center;
+    color: black;
   }
 }

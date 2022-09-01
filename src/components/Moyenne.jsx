@@ -3,9 +3,10 @@ import { LineChart, Line, XAxis, YAxis, Tooltip } from 'recharts'
 
 const Moyenne = (data) => {
   let session = data.data.sessions
-  console.log(session)
+
   return (
     <div className="moyenne">
+      <h4>Durée moyenne des sessions</h4>
       <LineChart
         width={258}
         height={263}
@@ -40,7 +41,7 @@ const Moyenne = (data) => {
           hide
         />
 
-        <Tooltip />
+        <Tooltip content={<CustomTooltipObjectif />} />
 
         <Line
           type="natural"
@@ -53,6 +54,16 @@ const Moyenne = (data) => {
       </LineChart>
     </div>
   )
+}
+export const CustomTooltipObjectif = ({ active, payload }) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="custom-tooltip-objectif">
+        <p className="textValue"> {`${payload[0].value} min`}</p>
+      </div>
+    )
+  }
+  return null
 }
 
 export default Moyenne
