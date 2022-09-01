@@ -33,6 +33,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 750px;
+    margin-bottom: 30px;
   }
 }
 .iconeValeur {
@@ -41,7 +42,9 @@ main {
   justify-content: space-between;
   margin-left: 30px;
   @include desktop {
+    width: 750px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-left: 60px;
   }
 }
