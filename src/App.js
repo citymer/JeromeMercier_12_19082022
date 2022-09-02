@@ -1,6 +1,7 @@
 import Home from './pages/Home'
 import './styles/index.scss'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import Error404 from './components/Error404'
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Navigate to="/home/12" />} />
         <Route path="/home/:userId" element={<Home />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </BrowserRouter>
   )

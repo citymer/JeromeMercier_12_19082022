@@ -12,16 +12,32 @@ import Proteines from '../components/Proteines'
 import Glucides from '../components/Glucides'
 import Lipides from '../components/Lipides'
 import { useParams } from 'react-router-dom'
+import { UserDataFormater } from '../services/UserDataFormater'
 
 const Home = () => {
   let { userId } = useParams()
+  if (userId === undefined) {
+    userId = 12
+  }
   let { mainData, activityData, averageSessionsData, performanceData, error } =
     useFetch(userId)
+  console.log(mainData)
   //console.log(performanceData)
   //console.log(isLoading)
 
   if (error) {
     return <span>Oups il y a eu un problème</span>
+  } else if (useFetch === undefined) {
+    const dataFormater = new UserDataFormater(
+      mainData,
+      activityData,
+      averageSessionsData,
+      performanceData
+    )
+    mainData = dataFormater.getFormattedMain()
+    activityData = dataFormater.getFormattedActivity()
+    averageSessionsData = dataFormater.getFormattedAverageSessions()
+    performanceData = dataFormater.getFormattedPerformance()
   }
 
   if (mainData !== undefined) {
