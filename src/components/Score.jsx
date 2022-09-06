@@ -1,9 +1,13 @@
 import React from 'react'
 import { RadialBarChart, RadialBar, Legend } from 'recharts'
 
+/**
+ * function that builds a score graph with a percentage
+ * @param {object} data
+ * @returns a graph score
+ */
 const Score = (data) => {
   let score = [data.data]
-  console.log(score)
 
   return (
     <div className="score">
@@ -20,20 +24,20 @@ const Score = (data) => {
         outerRadius={120}
         data={score}
       >
-        <Legend content={<CustomLegendScore />} />
+        <Legend
+          content={(payload) => (
+            <div className="custom-legend-score">
+              <p className="custom-legend-text">
+                {payload?.payload[0]?.payload.todayScore * 100}%
+              </p>
+              <p className="text-objectif"> de votre objectif</p>
+            </div>
+          )}
+        />
         <RadialBar dataKey="todayScore" cornerRadius="50%" fill="#E60000" />
       </RadialBarChart>
     </div>
   )
 }
-export function CustomLegendScore(payload) {
-  return (
-    <div className="custom-legend-score">
-      <p className="custom-legend-text">
-        {payload?.payload[0]?.payload.todayScore * 100}%
-      </p>
-      <p className="text-objectif"> de votre objectif</p>
-    </div>
-  )
-}
+
 export default Score

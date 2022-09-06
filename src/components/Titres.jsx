@@ -2,7 +2,7 @@ import React from 'react'
 
 const titres = (data) => {
   let info = data.data.userInfos
-  console.log(info)
+
   return (
     <div className="titres">
       <h1>

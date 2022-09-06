@@ -1,5 +1,5 @@
 import React from 'react'
-import useFetch from '../services/fetchAPI'
+
 import Header from '../components/Header'
 import NavLeft from '../components/NavLeft'
 import Titres from '../components/Titres'
@@ -12,34 +12,24 @@ import Proteines from '../components/Proteines'
 import Glucides from '../components/Glucides'
 import Lipides from '../components/Lipides'
 import { useParams } from 'react-router-dom'
-import { UserDataFormater } from '../services/UserDataFormater'
+import useFetchs from '../services/mockAPI'
 
+/**
+ * function that creates the home page with its components
+ * @returns the Home page html
+ */
 const Home = () => {
   let { userId } = useParams()
+  let { mainData, activityData, averageSessionsData, performanceData, error } =
+    useFetchs(userId)
+
   if (userId === undefined) {
     userId = 12
   }
-  let { mainData, activityData, averageSessionsData, performanceData, error } =
-    useFetch(userId)
-  console.log(mainData)
-  //console.log(performanceData)
-  //console.log(isLoading)
 
   if (error) {
-    return <span>Oups il y a eu un problème</span>
-  } else if (useFetch === undefined) {
-    const dataFormater = new UserDataFormater(
-      mainData,
-      activityData,
-      averageSessionsData,
-      performanceData
-    )
-    mainData = dataFormater.getFormattedMain()
-    activityData = dataFormater.getFormattedActivity()
-    averageSessionsData = dataFormater.getFormattedAverageSessions()
-    performanceData = dataFormater.getFormattedPerformance()
+    return <span>.........Oups il y a eu un problème </span>
   }
-
   if (mainData !== undefined) {
     return (
       <div>
@@ -55,7 +45,7 @@ const Home = () => {
                 <div className="troisGraphiques">
                   <Moyenne data={averageSessionsData} />
                   <Intensite data={performanceData} />
-                  <Score />
+                  <Score data={mainData} />
                 </div>
               </div>
               <div className="iconeValeur">

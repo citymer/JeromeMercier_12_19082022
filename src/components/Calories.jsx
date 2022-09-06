@@ -2,7 +2,7 @@ import React from 'react'
 import calories from '../assets/calories.png'
 const Calories = (data) => {
   let keyData = data.data.keyData
-  console.log(keyData)
+
   return (
     <div className="boite">
       <div className="iconDiv">

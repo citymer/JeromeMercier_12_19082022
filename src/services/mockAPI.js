@@ -5,7 +5,7 @@ import {
   USER_PERFORMANCE,
 } from '../mocks/data'
 
-const useFetch = (userId) => {
+const useFetchs = (userId) => {
   const mainData = USER_MAIN_DATA.find((elem) => elem.id === parseInt(userId))
   const activityData = USER_ACTIVITY.find(
     (elem) => elem.userId === parseInt(userId)
@@ -28,4 +28,4 @@ const useFetch = (userId) => {
   }
 }
 
-export default useFetch
+export default useFetchs
