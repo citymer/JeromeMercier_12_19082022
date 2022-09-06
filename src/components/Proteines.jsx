@@ -1,6 +1,11 @@
 import React from 'react'
 import proteines from '../assets/protein-icon.png'
 
+/**
+ * builds the component that displays the amount of protein
+ * @param {object} data
+ * @returns protein picture and amount of protein
+ */
 const Proteines = (data) => {
   let keyData = data.data.keyData
   return (
