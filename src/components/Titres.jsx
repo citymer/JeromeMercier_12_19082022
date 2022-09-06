@@ -1,5 +1,10 @@
 import React from 'react'
 
+/**
+ * function that returns the user's first name and congratulations in h2
+ * @param {object} data
+ * @returns Bonjour firstName and h2
+ */
 const titres = (data) => {
   let info = data.data.userInfos
 
