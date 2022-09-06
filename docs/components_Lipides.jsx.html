@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: components/Lipides.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,42 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: components/Lipides.jsx</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from 'react'
+import lipides from '../assets/fat-icon.png'
 
+/**
+ * build the component that displays the amount of lipid
+ * @param {object} data
+ * @returns lipid picture and amount of lipid
+ */
+const Lipides = (data) => {
+  let keyData = data.data.keyData
+  return (
+    &lt;div className="boite">
+      &lt;div className="iconDiv">
+        &lt;img className="img" src={lipides} alt="lipides" />
+      &lt;/div>
+      &lt;div className="textDiv">
+        &lt;p className="textTop">{keyData.lipidCount}g&lt;/p>
+        &lt;p className="textBottom">Lipides&lt;/p>
+      &lt;/div>
+    &lt;/div>
+  )
+}
 
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+export default Lipides
+</code></pre>
+        </article>
+    </section>
 
 
 

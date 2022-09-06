@@ -1,6 +1,11 @@
 import React from 'react'
 import lipides from '../assets/fat-icon.png'
 
+/**
+ * build the component that displays the amount of lipid
+ * @param {object} data
+ * @returns lipid picture and amount of lipid
+ */
 const Lipides = (data) => {
   let keyData = data.data.keyData
   return (

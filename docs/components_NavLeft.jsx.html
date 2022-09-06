@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: components/NavLeft.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,43 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: components/NavLeft.jsx</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from 'react'
+import yoga from '../assets/yoga.png'
+import natation from '../assets/natation.png'
+import velo from '../assets/velo.png'
+import haltere from '../assets/haltere.png'
 
+/**
+ * buils the navigation located on the left with the icons
+ * @returns {img} yoga natation velo haltere and copiryght
+ */
+const NavLeft = () => {
+  return (
+    &lt;div className="navleft">
+      &lt;div className="contentIcon">
+        &lt;img src={yoga} alt="yoga" />
+        &lt;img src={natation} alt="yoga" />
+        &lt;img src={velo} alt="yoga" />
+        &lt;img src={haltere} alt="yoga" />
+      &lt;/div>
+      &lt;p className="copiryght">Copiryght, SportSee 2020&lt;/p>
+    &lt;/div>
+  )
+}
 
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+export default NavLeft
+</code></pre>
+        </article>
+    </section>
 
 
 

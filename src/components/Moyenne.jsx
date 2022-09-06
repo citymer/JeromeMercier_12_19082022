@@ -1,6 +1,11 @@
 import React from 'react'
 import { LineChart, Line, XAxis, YAxis, Tooltip } from 'recharts'
 
+/**
+ * builds the graph with the average session duration
+ * @param {object} data
+ * @returns LineChart
+ */
 const Moyenne = (data) => {
   let session = data.data.sessions
 
@@ -19,7 +24,7 @@ const Moyenne = (data) => {
             let mouseXpercentage = Math.round(
               (e.activeCoordinate.x / windowWidth) * 100
             )
-            // @ts-ignore
+
             div.style.background = `linear-gradient(90deg, rgba(255,0,0,1) ${mouseXpercentage}%, rgba(175,0,0,1.5) ${mouseXpercentage}%, rgba(175,0,0,1.5) 100%)`
           }
         }}
@@ -41,7 +46,18 @@ const Moyenne = (data) => {
           hide
         />
 
-        <Tooltip content={<CustomTooltipObjectif />} />
+        <Tooltip
+          content={(active, payload) => {
+            if (active && payload && payload.length) {
+              return (
+                <div className="custom-tooltip-objectif">
+                  <p className="textValue"> {`${payload[0].value} min`}</p>
+                </div>
+              )
+            }
+            return null
+          }}
+        />
 
         <Line
           type="natural"
@@ -54,16 +70,6 @@ const Moyenne = (data) => {
       </LineChart>
     </div>
   )
-}
-export const CustomTooltipObjectif = ({ active, payload }) => {
-  if (active && payload && payload.length) {
-    return (
-      <div className="custom-tooltip-objectif">
-        <p className="textValue"> {`${payload[0].value} min`}</p>
-      </div>
-    )
-  }
-  return null
 }
 
 export default Moyenne
