@@ -3,6 +3,10 @@ import Header from './Header'
 import NavLeft from './NavLeft'
 import { Link } from 'react-router-dom'
 
+/**
+ * builds a page that displays an error
+ * @returns an error page
+ */
 const Error404 = () => {
   return (
     <div>

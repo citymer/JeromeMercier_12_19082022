@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: components/Lipides.jsx</title>
+    <title>JSDoc: Source: components/Calories.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: components/Lipides.jsx</h1>
+    <h1 class="page-title">Source: components/Calories.jsx</h1>
 
     
 
@@ -27,29 +27,29 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>import React from 'react'
-import lipides from '../assets/fat-icon.png'
+import calories from '../assets/calories.png'
 
 /**
- * build the component that displays the amount of lipid
+ * builds the component that displays the amount of calorie
  * @param {object} data
- * @returns lipid picture and amount of lipid
+ * @returns calorie picture and amount of calorie
  */
-const Lipides = (data) => {
+const Calories = (data) => {
   let keyData = data.data.keyData
   return (
     &lt;div className="boite">
       &lt;div className="iconDiv">
-        &lt;img className="img" src={lipides} alt="lipides" />
+        &lt;img className="img" src={calories} alt="calories" />
       &lt;/div>
       &lt;div className="textDiv">
-        &lt;p className="textTop">{keyData.lipidCount}g&lt;/p>
-        &lt;p className="textBottom">Lipides&lt;/p>
+        &lt;p className="textTop">{keyData.calorieCount}KCal&lt;/p>
+        &lt;p className="textBottom">Calories&lt;/p>
       &lt;/div>
     &lt;/div>
   )
 }
 
-export default Lipides
+export default Calories
 </code></pre>
         </article>
     </section>

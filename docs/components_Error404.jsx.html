@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: components/Lipides.jsx</title>
+    <title>JSDoc: Source: components/Error404.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: components/Lipides.jsx</h1>
+    <h1 class="page-title">Source: components/Error404.jsx</h1>
 
     
 
@@ -27,29 +27,34 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>import React from 'react'
-import lipides from '../assets/fat-icon.png'
+import Header from './Header'
+import NavLeft from './NavLeft'
+import { Link } from 'react-router-dom'
 
 /**
- * build the component that displays the amount of lipid
- * @param {object} data
- * @returns lipid picture and amount of lipid
+ * builds a page that displays an error
+ * @returns an error page
  */
-const Lipides = (data) => {
-  let keyData = data.data.keyData
+const Error404 = () => {
   return (
-    &lt;div className="boite">
-      &lt;div className="iconDiv">
-        &lt;img className="img" src={lipides} alt="lipides" />
-      &lt;/div>
-      &lt;div className="textDiv">
-        &lt;p className="textTop">{keyData.lipidCount}g&lt;/p>
-        &lt;p className="textBottom">Lipides&lt;/p>
-      &lt;/div>
+    &lt;div>
+      &lt;Header />
+      &lt;main>
+        &lt;NavLeft />
+        &lt;section className="contentError">
+          &lt;p className="erreur">ERREUR 404&lt;/p>
+          &lt;ul>
+            &lt;Link to="/">
+              &lt;li className="retourner">Retourner sur la page d'acceuil&lt;/li>
+            &lt;/Link>
+          &lt;/ul>
+        &lt;/section>
+      &lt;/main>
     &lt;/div>
   )
 }
 
-export default Lipides
+export default Error404
 </code></pre>
         </article>
     </section>
