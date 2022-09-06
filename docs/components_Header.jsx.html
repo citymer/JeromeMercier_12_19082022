@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: components/Titres.jsx</title>
+    <title>JSDoc: Source: components/Header.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: components/Titres.jsx</h1>
+    <h1 class="page-title">Source: components/Header.jsx</h1>
 
     
 
@@ -27,26 +27,27 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>import React from 'react'
+import logo from '../assets/logo.png'
 
 /**
- * function that returns the user's first name and congratulations in h2
- * @param {object} data
- * @returns Bonjour firstName and h2
+ * builds the header
+ * @returns header
  */
-const titres = (data) => {
-  let info = data.data.userInfos
-
+const Header = () => {
   return (
-    &lt;div className="titres">
-      &lt;h1>
-        Bonjour &lt;span>{info.firstName}&lt;/span>
-      &lt;/h1>
-      &lt;h2>Félicitation ! Vous avez explosé vos objectifs hier 👏&lt;/h2>
-    &lt;/div>
+    &lt;header>
+      &lt;nav>
+        &lt;img src={logo} alt="logo" className="logo" />
+        &lt;p>Acceuil&lt;/p>
+        &lt;p>Profil&lt;/p>
+        &lt;p>Réglage&lt;/p>
+        &lt;p className="communaute">Communauté&lt;/p>
+      &lt;/nav>
+    &lt;/header>
   )
 }
 
-export default titres
+export default Header
 </code></pre>
         </article>
     </section>
