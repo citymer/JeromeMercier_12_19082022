@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# SporSee
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projet 12 - Développez un tableau de bord d'analytics avec react
 
-## Available Scripts
+## Author
 
-In the project directory, you can run:
+Jérôme Mercier
 
 ### `npm start`
 
