@@ -1,6 +1,11 @@
 import React from 'react'
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis } from 'recharts'
 
+/**
+ * builds a graph with the score as a percentage
+ * @param {object} data
+ * @returns RadarChart
+ */
 const Intensite = (data) => {
   let performance = data.data.data
 

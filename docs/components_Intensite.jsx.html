@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: components/Score.jsx</title>
+    <title>JSDoc: Source: components/Intensite.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: components/Score.jsx</h1>
+    <h1 class="page-title">Source: components/Intensite.jsx</h1>
 
     
 
@@ -27,48 +27,39 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>import React from 'react'
-import { RadialBarChart, RadialBar, Legend } from 'recharts'
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis } from 'recharts'
 
 /**
- * function that builds a score graph with a percentage
+ * builds a graph with the score as a percentage
  * @param {object} data
- * @returns a graph score
+ * @returns RadarChart
  */
-const Score = (data) => {
-  let score = [data.data]
+const Intensite = (data) => {
+  let performance = data.data.data
 
   return (
-    &lt;div className="score">
-      &lt;h3>Score&lt;/h3>
-      &lt;RadialBarChart
-        width={258}
-        height={263}
-        startAngle={95}
-        endAngle={230}
-        cx="50%"
-        cy="50%"
-        innerRadius={70}
-        barSize={10}
-        outerRadius={120}
-        data={score}
-      >
-        &lt;Legend
-          content={(payload) => (
-            &lt;div className="custom-legend-score">
-              &lt;p className="custom-legend-text">
-                {payload?.payload[0]?.payload.todayScore * 100}%
-              &lt;/p>
-              &lt;p className="text-objectif"> de votre objectif&lt;/p>
-            &lt;/div>
-          )}
+    &lt;div className="intensite">
+      &lt;RadarChart width={258} height={263} data={performance} outerRadius={72}>
+        &lt;PolarGrid />
+        &lt;PolarAngleAxis
+          dataKey="kind"
+          stroke="#FFFFFF"
+          fontSize={12}
+          tickLine={false}
         />
-        &lt;RadialBar dataKey="todayScore" cornerRadius="50%" fill="#E60000" />
-      &lt;/RadialBarChart>
+        &lt;Radar
+          dataKey="value"
+          stroke="#E60000"
+          fill="#E60000"
+          fillOpacity={0.7}
+          legendType="none"
+        />
+      &lt;/RadarChart>
     &lt;/div>
   )
 }
 
-export default Score
+export default Intensite
 </code></pre>
         </article>
     </section>
