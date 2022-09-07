@@ -27,7 +27,7 @@ https://github.com/citymer/p12-backend
 
 [![Visual Studio](https://badgen.net/badge/icon/visualstudio?icon=visualstudio&label)](https://visualstudio.microsoft.com)
 
-- yarn[![](https://img.shields.io/badge/Yarn-blue.svg)](https://godoc.org/nanomsg.org/go/mangos/v2)
+[![](https://img.shields.io/badge/Yarn-blue.svg)](https://godoc.org/nanomsg.org/go/mangos/v2)
 
 ### Installing and lauching Back-end
 
