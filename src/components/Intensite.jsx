@@ -6,7 +6,7 @@ const Intensite = (data) => {
 
   return (
     <div className="intensite">
-      <RadarChart width={258} height={263} data={performance}>
+      <RadarChart width={258} height={263} data={performance} outerRadius={72}>
         <PolarGrid />
         <PolarAngleAxis
           dataKey="kind"
