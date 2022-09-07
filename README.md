@@ -8,10 +8,10 @@ Jérôme Mercier
 
 ## Technologies
 
-- React
-- React Router
+- React ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+- React Router 	![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 - Recharts
-- Sass
+- Sass 	![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
 ## Environments
 
@@ -23,11 +23,11 @@ https://github.com/citymer/p12-backend
 
 ### Prerequisites
 
-[![](https://img.shields.io/badge/NodeJs-v14.18.0-blue.svg)](https://godoc.org/nanomsg.org/go/mangos/v2)
+[![NodeJs](https://img.shields.io/badge/NodeJs-v14.18.0-blue.svg)](https://godoc.org/nanomsg.org/go/mangos/v2)
 
 [![Visual Studio](https://badgen.net/badge/icon/visualstudio?icon=visualstudio&label)](https://visualstudio.microsoft.com)
 
-[![](https://img.shields.io/badge/Yarn-blue.svg)](https://godoc.org/nanomsg.org/go/mangos/v2)
+[![Yarn](https://img.shields.io/badge/Yarn-blue.svg)](https://godoc.org/nanomsg.org/go/mangos/v2)
 
 ### Installing and lauching Back-end
 
