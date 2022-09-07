@@ -47,7 +47,7 @@ const Moyenne = (data) => {
         />
 
         <Tooltip
-          content={(active, payload) => {
+          content={({ active, payload }) => {
             if (active && payload && payload.length) {
               return (
                 <div className="custom-tooltip-objectif">
