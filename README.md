@@ -30,7 +30,7 @@ https://github.com/citymer/p12-backend
 ### Installing and lauching Back-end
 
 Clone the repository of SporSee Back-end:
-git clone https://github.com/citymer/p12-backend
+```git clone https://github.com/citymer/p12-backend```
 
 inside this back-end repository, install dependencies:
 yarn install
