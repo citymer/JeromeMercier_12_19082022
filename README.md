@@ -1,6 +1,6 @@
 # SporSee
 
-Projet 12 - Développez un tableau de bord d'analytics avec react
+Projet 12 - Develop an analytics dashboard with react
 
 ## Author
 
