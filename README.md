@@ -23,9 +23,9 @@ https://github.com/citymer/p12-backend
 
 ### Prerequisites
 
-NodeJs v14.18.0
-VsCode
-yarn
+- NodeJs v14.18.0
+- VsCode
+- yarn
 
 ### Installing and lauching Back-end
 
