@@ -23,7 +23,7 @@ https://github.com/citymer/p12-backend
 
 ### Prerequisites
 
-- NodeJs v14.18.0[![](https://img.shields.io/badge/NodeJs-v14.18.0-blue.svg)](https://godoc.org/nanomsg.org/go/mangos/v2)
+[![](https://img.shields.io/badge/NodeJs-v14.18.0-blue.svg)](https://godoc.org/nanomsg.org/go/mangos/v2)
 - VsCode
 - yarn
 
