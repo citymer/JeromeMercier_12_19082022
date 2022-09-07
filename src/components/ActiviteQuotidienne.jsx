@@ -3,6 +3,11 @@ import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Bar } from 'recharts'
 import '../styles/utils/_variables.scss'
 import PropTypes from 'prop-types'
 
+/**
+ * buids a graph that displays daily activity
+ * @param {object} data
+ * @returns Barchart
+ */
 const ActiviteQuotidienne = (data) => {
   let session = data.data.sessions
 

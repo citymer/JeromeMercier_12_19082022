@@ -21,7 +21,7 @@ const USER_MAIN_DATA = [
       lastName: 'Ratorez',
       age: 34,
     },
-    score: 0.3,
+    todayScore: 0.3,
     keyData: {
       calorieCount: 2500,
       proteinCount: 90,
@@ -36,36 +36,43 @@ const USER_ACTIVITY = [
     userId: 12,
     sessions: [
       {
+        jour: 1,
         day: '2020-07-01',
         kilogram: 80,
         calories: 240,
       },
       {
+        jour: 2,
         day: '2020-07-02',
         kilogram: 80,
         calories: 220,
       },
       {
+        jour: 3,
         day: '2020-07-03',
         kilogram: 81,
         calories: 280,
       },
       {
+        jour: 4,
         day: '2020-07-04',
         kilogram: 81,
         calories: 290,
       },
       {
+        jour: 5,
         day: '2020-07-05',
         kilogram: 80,
         calories: 160,
       },
       {
+        jour: 6,
         day: '2020-07-06',
         kilogram: 78,
         calories: 162,
       },
       {
+        jour: 7,
         day: '2020-07-07',
         kilogram: 76,
         calories: 390,
@@ -76,36 +83,43 @@ const USER_ACTIVITY = [
     userId: 18,
     sessions: [
       {
+        jour: 1,
         day: '2020-07-01',
         kilogram: 70,
         calories: 240,
       },
       {
+        jour: 2,
         day: '2020-07-02',
         kilogram: 69,
         calories: 220,
       },
       {
+        jour: 3,
         day: '2020-07-03',
         kilogram: 70,
         calories: 280,
       },
       {
+        jour: 4,
         day: '2020-07-04',
         kilogram: 70,
         calories: 500,
       },
       {
+        jour: 5,
         day: '2020-07-05',
         kilogram: 69,
         calories: 160,
       },
       {
+        jour: 6,
         day: '2020-07-06',
         kilogram: 69,
         calories: 162,
       },
       {
+        jour: 7,
         day: '2020-07-07',
         kilogram: 69,
         calories: 390,
@@ -119,31 +133,31 @@ const USER_AVERAGE_SESSIONS = [
     userId: 12,
     sessions: [
       {
-        day: 1,
+        day: 'L',
         sessionLength: 30,
       },
       {
-        day: 2,
+        day: 'M',
         sessionLength: 23,
       },
       {
-        day: 3,
+        day: 'M',
         sessionLength: 45,
       },
       {
-        day: 4,
+        day: 'J',
         sessionLength: 50,
       },
       {
-        day: 5,
+        day: 'V',
         sessionLength: 0,
       },
       {
-        day: 6,
+        day: 'S',
         sessionLength: 0,
       },
       {
-        day: 7,
+        day: 'D',
         sessionLength: 60,
       },
     ],
@@ -152,31 +166,31 @@ const USER_AVERAGE_SESSIONS = [
     userId: 18,
     sessions: [
       {
-        day: 1,
+        day: 'L',
         sessionLength: 30,
       },
       {
-        day: 2,
+        day: 'M',
         sessionLength: 40,
       },
       {
-        day: 3,
+        day: 'M',
         sessionLength: 50,
       },
       {
-        day: 4,
+        day: 'J',
         sessionLength: 30,
       },
       {
-        day: 5,
+        day: 'V',
         sessionLength: 30,
       },
       {
-        day: 6,
+        day: 'S',
         sessionLength: 50,
       },
       {
-        day: 7,
+        day: 'D',
         sessionLength: 50,
       },
     ],
@@ -197,27 +211,27 @@ const USER_PERFORMANCE = [
     data: [
       {
         value: 80,
-        kind: 1,
+        kind: 'Cardio',
       },
       {
         value: 120,
-        kind: 2,
+        kind: 'Energie',
       },
       {
         value: 140,
-        kind: 3,
+        kind: 'Endurance',
       },
       {
         value: 50,
-        kind: 4,
+        kind: 'Force',
       },
       {
         value: 200,
-        kind: 5,
+        kind: 'Vitesse',
       },
       {
         value: 90,
-        kind: 6,
+        kind: 'Intensité',
       },
     ],
   },
@@ -234,27 +248,27 @@ const USER_PERFORMANCE = [
     data: [
       {
         value: 200,
-        kind: 1,
+        kind: 'Cardio',
       },
       {
         value: 240,
-        kind: 2,
+        kind: 'Energie',
       },
       {
         value: 80,
-        kind: 3,
+        kind: 'Endurance',
       },
       {
         value: 80,
-        kind: 4,
+        kind: 'Force',
       },
       {
         value: 220,
-        kind: 5,
+        kind: 'Vitesse',
       },
       {
         value: 110,
-        kind: 6,
+        kind: 'Intensité',
       },
     ],
   },
