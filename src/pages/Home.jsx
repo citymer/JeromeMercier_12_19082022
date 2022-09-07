@@ -1,5 +1,4 @@
 import React from 'react'
-
 import Header from '../components/Header'
 import NavLeft from '../components/NavLeft'
 import Titres from '../components/Titres'
@@ -13,6 +12,7 @@ import Glucides from '../components/Glucides'
 import Lipides from '../components/Lipides'
 import { useParams } from 'react-router-dom'
 import useFetchs from '../services/mockAPI'
+import useFetch from '../services/fetchAPI'
 
 /**
  * function that creates the home page with its components
@@ -21,7 +21,7 @@ import useFetchs from '../services/mockAPI'
 const Home = () => {
   let { userId } = useParams()
   let { mainData, activityData, averageSessionsData, performanceData, error } =
-    useFetchs(userId)
+    useFetch(userId)
 
   if (userId === undefined) {
     userId = 12
