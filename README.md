@@ -24,8 +24,10 @@ https://github.com/citymer/p12-backend
 ### Prerequisites
 
 [![](https://img.shields.io/badge/NodeJs-v14.18.0-blue.svg)](https://godoc.org/nanomsg.org/go/mangos/v2)
+
 [![Visual Studio](https://badgen.net/badge/icon/visualstudio?icon=visualstudio&label)](https://visualstudio.microsoft.com)
-- yarn
+
+- yarn[![](https://img.shields.io/badge/Yarn-blue.svg)](https://godoc.org/nanomsg.org/go/mangos/v2)
 
 ### Installing and lauching Back-end
 
