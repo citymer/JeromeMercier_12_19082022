@@ -55,7 +55,19 @@ const ActiviteQuotidienne = (data) => {
             hide={true}
           />
 
-          <Tooltip content={<CustomTooltip />} />
+          <Tooltip
+            content={({ payload, active }) => {
+              if (active) {
+                return (
+                  <div className="custom-tooltip-activity">
+                    <p className="label">{`${payload[0].value}`}kg</p>
+                    <p className="label">{`${payload[1].value}`}KCal</p>
+                  </div>
+                )
+              }
+              return null
+            }}
+          />
           <Bar
             yAxisId="kilogram"
             name="Poids (kg)"
@@ -79,33 +91,5 @@ const ActiviteQuotidienne = (data) => {
     </div>
   )
 }
-//custom tooltip of BarChart
-function CustomTooltip({ payload, active }) {
-  if (active) {
-    return (
-      <div className="custom-tooltip-activity">
-        <p className="label">{`${payload[0].value}`}kg</p>
-        <p className="label">{`${payload[1].value}`}KCal</p>
-      </div>
-    )
-  }
-  return null
-}
 
-//proptypes of CustomTooltip
-CustomTooltip.propTypes = {
-  active: PropTypes.bool,
-  payload: PropTypes.array,
-}
-
-//proptypes of Activity
-ActiviteQuotidienne.propTypes = {
-  activity: PropTypes.arrayOf(
-    PropTypes.shape({
-      jour: PropTypes.number,
-      kilogram: PropTypes.number,
-      calories: PropTypes.number,
-    })
-  ),
-}
 export default ActiviteQuotidienne
