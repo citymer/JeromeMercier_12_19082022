@@ -1,7 +1,6 @@
 import React from 'react'
 import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Bar } from 'recharts'
 import '../styles/utils/_variables.scss'
-import PropTypes from 'prop-types'
 
 /**
  * buids a graph that displays daily activity
