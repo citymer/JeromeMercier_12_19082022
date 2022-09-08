@@ -10,9 +10,9 @@ import Calories from '../components/Calories'
 import Proteines from '../components/Proteines'
 import Glucides from '../components/Glucides'
 import Lipides from '../components/Lipides'
+import useFetch from '../services/fetchAPI'
 import { useParams } from 'react-router-dom'
 import useFetchs from '../services/mockAPI'
-import useFetch from '../services/fetchAPI'
 
 /**
  * function that creates the home page with its components
@@ -22,10 +22,6 @@ const Home = () => {
   let { userId } = useParams()
   let { mainData, activityData, averageSessionsData, performanceData, error } =
     useFetch(userId)
-
-  if (userId === undefined) {
-    userId = 12
-  }
 
   if (error) {
     return <span>.........Oups il y a eu un problème </span>

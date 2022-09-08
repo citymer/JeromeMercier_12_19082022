@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from './Header'
-import NavLeft from './NavLeft'
+import Header from '../components/Header'
+import NavLeft from '../components/NavLeft'
 import { Link } from 'react-router-dom'
 
 /**
