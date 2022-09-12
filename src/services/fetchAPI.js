@@ -10,15 +10,14 @@ const useFetch = (userId) => {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    const userMain = `http://localhost:3000/user/${userId}`
-    const userActivity = `http://localhost:3000/user/${userId}/activity`
-    const userAverageSessions = `http://localhost:3000/user/${userId}/average-sessions`
-    const userPerformance = `http://localhost:3000/user/${userId}/performance`
-
-    const request1 = axios.get(userMain)
-    const request2 = axios.get(userActivity)
-    const request3 = axios.get(userAverageSessions)
-    const request4 = axios.get(userPerformance)
+    const request1 = axios.get(`http://localhost:3000/user/${userId}`)
+    const request2 = axios.get(`http://localhost:3000/user/${userId}/activity`)
+    const request3 = axios.get(
+      `http://localhost:3000/user/${userId}/average-sessions`
+    )
+    const request4 = axios.get(
+      `http://localhost:3000/user/${userId}/performance`
+    )
 
     axios
       .all([request1, request2, request3, request4])
