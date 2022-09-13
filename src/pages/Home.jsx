@@ -12,7 +12,7 @@ import Glucides from '../components/Glucides'
 import Lipides from '../components/Lipides'
 import useFetch from '../services/fetchAPI'
 import { useParams } from 'react-router-dom'
-import useFetchs from '../services/mockAPI'
+//import useFetchs from '../services/mockAPI'
 
 /**
  * function that creates the home page with its components
