@@ -5,12 +5,11 @@ import PropTypes from 'prop-types'
 
 /**
  * buids a graph that displays daily activity
- * @param {object} data
+ * @param {data:object}} props
  * @returns Barchart
  */
-const ActiviteQuotidienne = (props) => {
-  let session = props.data.sessions
 
+const ActiviteQuotidienne = (props) => {
   return (
     <div className="activite">
       <div className="presentation">
@@ -27,7 +26,12 @@ const ActiviteQuotidienne = (props) => {
         </div>
       </div>
       <div className="graphique">
-        <BarChart width={740} height={250} data={session} margin={{ left: 30 }}>
+        <BarChart
+          width={740}
+          height={250}
+          data={props.data.sessions}
+          margin={{ left: 30 }}
+        >
           <CartesianGrid strokeDasharray="1 1" vertical={false} />
           <XAxis dataKey={props.day} tickLine={false} axisLine={false} />
           <XAxis

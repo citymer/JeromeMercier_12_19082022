@@ -1,17 +1,16 @@
 import React from 'react'
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis } from 'recharts'
+import PropTypes from 'prop-types'
 
 /**
  * builds a graph with the score as a percentage
- * @param {object} data
+ * @param {{data: Array}} props
  * @returns RadarChart
  */
-const Intensite = (data) => {
-  let performance = data.data.data
-
+const Intensite = (props) => {
   return (
     <div className="intensite">
-      <RadarChart width={258} height={263} data={performance} outerRadius={72}>
+      <RadarChart width={258} height={263} data={props.kind()} outerRadius={72}>
         <PolarGrid />
         <PolarAngleAxis
           dataKey="kind"
@@ -20,7 +19,7 @@ const Intensite = (data) => {
           tickLine={false}
         />
         <Radar
-          dataKey="value"
+          dataKey="values"
           stroke="#E60000"
           fill="#E60000"
           fillOpacity={0.7}
@@ -31,4 +30,7 @@ const Intensite = (data) => {
   )
 }
 
+Intensite.propTypes = {
+  kind: PropTypes.func.isRequired,
+}
 export default Intensite

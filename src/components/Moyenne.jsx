@@ -1,14 +1,13 @@
 import React from 'react'
 import { LineChart, Line, XAxis, YAxis, Tooltip } from 'recharts'
+import PropTypes from 'prop-types'
 
 /**
  * builds the graph with the average session duration
- * @param {object} data
+ * @param {{data:Array}} props
  * @returns LineChart
  */
-const Moyenne = (data) => {
-  let session = data.data.sessions
-
+const Moyenne = (props) => {
   return (
     <div className="moyenne">
       <h4>Durée moyenne des sessions</h4>
@@ -16,7 +15,7 @@ const Moyenne = (data) => {
         width={258}
         height={263}
         margin={{ top: 35, right: 5, left: 5, bottom: 10 }}
-        data={session}
+        data={props.data.sessions}
         onMouseMove={(e) => {
           if (e.isTooltipActive === true) {
             let div = document.querySelector('.moyenne')
@@ -30,14 +29,13 @@ const Moyenne = (data) => {
         }}
       >
         <XAxis
-          dataKey="day"
+          dataKey={props.jour}
           stroke="#FFFFFF"
           opacity={0.5}
           tickLine={false}
           axisLine={false}
         />
         <YAxis
-          dataKey="sessionLength"
           padding={{ top: 40, bottom: 20 }}
           stroke="#FFFFFF"
           opacity={0.5}
@@ -70,6 +68,10 @@ const Moyenne = (data) => {
       </LineChart>
     </div>
   )
+}
+
+Moyenne.propTypes = {
+  jour: PropTypes.func.isRequired,
 }
 
 export default Moyenne
