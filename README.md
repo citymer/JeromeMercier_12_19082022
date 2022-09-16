@@ -10,7 +10,7 @@ Jérôme Mercier
 
  ![React](https://img.shields.io/badge/react_V18.2.0-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
  
- ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+ ![React Router](https://img.shields.io/badge/React_Router_Dom_V6.3.0-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
   
  [![Recharts](https://img.shields.io/badge/Recharts-grey.svg)](https://godoc.org/nanomsg.org/go/mangos/v2)
 
