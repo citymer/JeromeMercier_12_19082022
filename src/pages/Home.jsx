@@ -20,8 +20,27 @@ import { useParams } from 'react-router-dom'
  */
 const Home = () => {
   let { userId } = useParams()
-  let { mainData, activityData, averageSessionsData, performanceData, error } =
-    useFetch(userId)
+  let {
+    mainData,
+    name,
+    activityData,
+    averageSessionsData,
+    day,
+    performanceData,
+    error,
+  } = useFetch(userId)
+
+  const comptageJour = () => {
+    return day.map((jour) => jour.day)
+  }
+  const calorie = () => {
+    let session = activityData.sessions
+    return session.map((cal) => cal.calories)
+  }
+  const poids = () => {
+    let session = activityData.sessions
+    return session.map((kg) => kg.kilogram)
+  }
 
   if (error) {
     return <span>.........Oups il y a eu un problème </span>
@@ -33,11 +52,16 @@ const Home = () => {
         <main>
           <NavLeft />
           <section>
-            <Titres data={mainData} />
+            <Titres data={name} />
 
             <div className="resultat">
               <div className="graphiques">
-                <ActiviteQuotidienne data={activityData} />
+                <ActiviteQuotidienne
+                  data={activityData}
+                  day={comptageJour}
+                  cal={calorie}
+                  kg={poids}
+                />
                 <div className="troisGraphiques">
                   <Moyenne data={averageSessionsData} />
                   <Intensite data={performanceData} />

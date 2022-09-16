@@ -1,14 +1,15 @@
 import React from 'react'
 import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Bar } from 'recharts'
 import '../styles/utils/_variables.scss'
+import PropTypes from 'prop-types'
 
 /**
  * buids a graph that displays daily activity
  * @param {object} data
  * @returns Barchart
  */
-const ActiviteQuotidienne = (data) => {
-  let session = data.data.sessions
+const ActiviteQuotidienne = (props) => {
+  let session = props.data.sessions
 
   return (
     <div className="activite">
@@ -28,17 +29,17 @@ const ActiviteQuotidienne = (data) => {
       <div className="graphique">
         <BarChart width={740} height={250} data={session} margin={{ left: 30 }}>
           <CartesianGrid strokeDasharray="1 1" vertical={false} />
-          <XAxis dataKey="jour" tickLine={false} axisLine={false} />
+          <XAxis dataKey={props.day} tickLine={false} axisLine={false} />
           <XAxis
-            dataKey="calories"
+            dataKey={props.cal}
             type="number"
             tickLine={false}
             axisLine={false}
           />
 
           <YAxis
-            yAxisId="kilogram"
-            dataKey="kilogram"
+            yAxisId={props.kg}
+            dataKey={props.kg}
             type="number"
             orientation="right"
             tickLine={false}
@@ -48,8 +49,8 @@ const ActiviteQuotidienne = (data) => {
             dx={15}
           />
           <YAxis
-            yAxisId="calories"
-            dataKey="calories"
+            yAxisId={props.cal}
+            dataKey={props.cal}
             type="number"
             hide={true}
           />
@@ -68,7 +69,7 @@ const ActiviteQuotidienne = (data) => {
             }}
           />
           <Bar
-            yAxisId="kilogram"
+            yAxisId={props.kg}
             name="Poids (kg)"
             label={false}
             dataKey="kilogram"
@@ -77,7 +78,7 @@ const ActiviteQuotidienne = (data) => {
             barSize={7}
           />
           <Bar
-            yAxisId="calories"
+            yAxisId={props.cal}
             name="Calories brûlées (kCal)"
             label={false}
             dataKey="calories"
@@ -89,6 +90,12 @@ const ActiviteQuotidienne = (data) => {
       </div>
     </div>
   )
+}
+
+ActiviteQuotidienne.propTypes = {
+  day: PropTypes.func.isRequired,
+  cal: PropTypes.func.isRequired,
+  kg: PropTypes.func.isRequired,
 }
 
 export default ActiviteQuotidienne
