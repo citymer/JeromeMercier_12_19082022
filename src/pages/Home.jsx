@@ -23,10 +23,19 @@ const Home = () => {
   let {
     mainData,
     name,
+    calories,
+    protein,
+    lipid,
+    glucid,
     activityData,
     averageSessionsData,
     day,
-    performanceData,
+    value,
+    value1,
+    value2,
+    value3,
+    value4,
+    value5,
     error,
   } = useFetch(userId)
 
@@ -40,6 +49,47 @@ const Home = () => {
   const poids = () => {
     let session = activityData.sessions
     return session.map((kg) => kg.kilogram)
+  }
+  const formatDay = () => {
+    const jour = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
+    return jour
+  }
+  const duree = () => {
+    let session = averageSessionsData.sessions
+    return session.map((temps) => temps.sessionLength)
+  }
+
+  const scores = () => {
+    let score = []
+    if (mainData?.score !== undefined) {
+      score = mainData.score * 100
+    }
+    if (mainData?.todayScore !== undefined) {
+      score = mainData.todayScore * 100
+    }
+    return score
+  }
+  /**
+   * formats data from Intensite.jsx
+   * @returns data
+   */
+  const format = () => {
+    let datas = [
+      { values: 10, kind: 'Cardio' },
+      { values: 10, kind: 'Energie' },
+      { values: 10, kind: 'Endurance' },
+      { values: 40, kind: 'Force' },
+      { values: 20, kind: 'Vitesse' },
+      { values: 70, kind: 'Intensité' },
+    ]
+    datas[0].values = value
+    datas[1].values = value1
+    datas[2].values = value2
+    datas[3].values = value3
+    datas[4].values = value4
+    datas[5].values = value5
+
+    return datas
   }
 
   if (error) {
@@ -63,16 +113,20 @@ const Home = () => {
                   kg={poids}
                 />
                 <div className="troisGraphiques">
-                  <Moyenne data={averageSessionsData} />
-                  <Intensite data={performanceData} />
-                  <Score data={mainData} />
+                  <Moyenne
+                    data={averageSessionsData}
+                    jour={formatDay}
+                    temps={duree}
+                  />
+                  <Intensite kind={format} />
+                  <Score data={mainData} score={scores} />
                 </div>
               </div>
               <div className="iconeValeur">
-                <Calories data={mainData} />
-                <Proteines data={mainData} />
-                <Glucides data={mainData} />
-                <Lipides data={mainData} />
+                <Calories data={calories} />
+                <Proteines data={protein} />
+                <Glucides data={glucid} />
+                <Lipides data={lipid} />
               </div>
             </div>
           </section>
