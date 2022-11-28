@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/JeromeMercier_12_19082022/static/css/main.db3f9406.css",
+    "main.js": "/JeromeMercier_12_19082022/static/js/main.f93d29e7.js",
+    "static/media/logo.png": "/JeromeMercier_12_19082022/static/media/logo.337e8febecea24c0c4b1.png",
+    "index.html": "/JeromeMercier_12_19082022/index.html",
+    "main.db3f9406.css.map": "/JeromeMercier_12_19082022/static/css/main.db3f9406.css.map",
+    "main.f93d29e7.js.map": "/JeromeMercier_12_19082022/static/js/main.f93d29e7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.db3f9406.css",
+    "static/js/main.f93d29e7.js"
+  ]
+}
