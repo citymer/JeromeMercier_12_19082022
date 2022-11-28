@@ -10,9 +10,9 @@ import Calories from '../components/Calories'
 import Proteines from '../components/Proteines'
 import Glucides from '../components/Glucides'
 import Lipides from '../components/Lipides'
-import useFetch from '../services/fetchAPI'
+//import useFetch from '../services/fetchAPI'
 import { useParams } from 'react-router-dom'
-//import useFetchs from '../services/mockAPI'
+import useFetchs from '../services/mockAPI'
 
 /**
  * function that creates the home page with its components
@@ -37,7 +37,7 @@ const Home = () => {
     value4,
     value5,
     error,
-  } = useFetch(userId)
+  } = useFetchs(userId)
 
   const comptageJour = () => {
     return day.map((jour) => jour.day)
