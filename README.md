@@ -8,13 +8,13 @@ Jérôme Mercier
 
 ## Technologies
 
- ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+ ![React](https://img.shields.io/badge/react_V18.2.0-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
  
- ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+ ![React Router](https://img.shields.io/badge/React_Router_Dom_V6.3.0-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
   
- [![Recharts](https://img.shields.io/badge/Recharts-grey.svg)](https://godoc.org/nanomsg.org/go/mangos/v2)
+ [![Recharts](https://img.shields.io/badge/Recharts_V2.1.13-grey.svg)](https://godoc.org/nanomsg.org/go/mangos/v2)
 
- ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+ ![SASS](https://img.shields.io/badge/SASS_V1.54.4-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
 ## Environments
 
